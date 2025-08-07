@@ -5,7 +5,7 @@ Este projeto implementa um **beacon BLE** usando um ESP32 utilizando de ciclos c
 ## Funcionamento
 
 - O ESP32 transmite um pacote BLE contendo uma string identificadora, neste caso sendo o "sala-rdc-01", por 10 segundos
-- Após os 10 segundos, entra em um deep sleep de mais 10 segundos
+- Após os 1 segundo, entra em um deep sleep de mais 60 segundos
 - Ao fim do sleep, acorda e reinicia automaticamente, repetindo o processo
 
 # Estrutura do Beacon
@@ -21,7 +21,7 @@ Para modificar o conteúdo transmitido, modifique o vetor "adv_raw_data[]" com o
 
 - BLE é inicializado usando o stack Bluedroid da Espressif
 - Advertisings dos dados começa com `esp_ble_gap_start_advertising()`
-- Uma tarefa `stop_adv_task` aguarda 10 segundos
+- Uma tarefa `stop_adv_task` aguarda 1 segundo
 - Advertising é parado com `esp_ble_gap_stop_advertising()`
 - No evento `ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT`, o chip entra em deep sleep
 - Após o sleep, o ESP32 acorda e começa o ciclo novamente
