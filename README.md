@@ -4,8 +4,8 @@ Este projeto implementa um **beacon BLE** usando um ESP32 utilizando de ciclos c
 
 ## Funcionamento
 
-- O ESP32 transmite um pacote BLE contendo uma string identificadora, neste caso sendo o "sala-rdc-01", por 10 segundos
-- Após os 1 segundo, entra em um deep sleep de mais 60 segundos
+- O ESP32 transmite um pacote BLE contendo uma string identificadora, neste caso sendo o "sala-rdc-01", por 1 segundo
+- Após 1 segundo, entra em um deep sleep de mais 60 segundos
 - Ao fim do sleep, acorda e reinicia automaticamente, repetindo o processo
 
 # Estrutura do Beacon
