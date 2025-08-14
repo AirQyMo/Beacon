@@ -9,17 +9,21 @@
 #include "esp_sleep.h"
 
 #define TAG "BEACON"
-#define SEGUNDOS 60
-#define PULSO 1 // em segundos 
+#define SEGUNDOS 1
+#define PULSO 60 // em segundos 
 
 //pacotes seguem este padrao:
 //tamanho do pacote (conteudo + tipo), tipo de pacote, conteudo do pacote
 static uint8_t raw_adv_data[] = {
-	//flags padrao (general discovery)
-	0x02, 0x01, 0x06,
+  //flags padrao (general discovery)
+  0x02, 0x01, 0x06,
 
-  //complete name
-	0x0C, 0x09, 's', 'a', 'l','a','-','r','d','c','-','0','1',
+  //uuid
+  //https://www.uuidgenerator.net/
+  //uuid DEVE ter 128 bits, uuids menores (16 bits) possuem numeros reservados
+  //https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Assigned_Numbers/out/en/Assigned_Numbers.pdf
+  0x11, 0x07, 
+  0x98, 0x8f, 0x73, 0xde, 0xfc, 0x38, 0x73, 0xb2, 0xf6, 0x42, 0x59, 0xda, 0x60, 0x52, 0x21, 0x4a,
 
   //txpower (+9dbm)
   0x02, 0x0a, 0x09
