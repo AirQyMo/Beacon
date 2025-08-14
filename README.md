@@ -4,7 +4,7 @@ Este projeto implementa um **beacon BLE** usando um ESP32 utilizando de ciclos c
 
 ## Funcionamento
 
-- O ESP32 transmite um pacote BLE contendo uma string identificadora, neste caso sendo o "sala-rdc-01", por 1 segundo
+- O ESP32 transmite um pacote BLE contendo um uuid identificador, neste caso sendo 4a215260-da59-42f6-b273-38fcde738f98, por 1 segundo
 - Após 1 segundo, entra em um deep sleep de mais 60 segundos
 - Ao fim do sleep, acorda e reinicia automaticamente, repetindo o processo
 
@@ -13,9 +13,9 @@ Este projeto implementa um **beacon BLE** usando um ESP32 utilizando de ciclos c
 O beacon anuncia os seguintes dados:
 
 - Flags BLE (0x01): modo discoverable
-- Complete Name (0x09): "sala-rdc-01"
+- Complete List (0x07): 4a215260-da59-42f6-b273-38fcde738f98
 
-Para modificar o conteúdo transmitido, modifique o vetor "adv_raw_data[]" com o conteúdo desejado, mantendo um limite de 31 bytes por cada pacote enviado
+Para modificar o conteúdo transmitido, modifique o vetor "adv_raw_data[]" com o conteúdo desejado, mantendo um limite de 31 bytes por cada pacote enviado. Fica ressaltado que o uuid deve ser escrito em little-endian dentro de `adv_raw_data`
 
 # Ciclo de Funcionamento
 
