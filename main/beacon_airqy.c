@@ -9,8 +9,8 @@
 #include "esp_sleep.h"
 
 #define TAG "BEACON"
-#define SEGUNDOS 1
-#define PULSO 60 // em segundos 
+#define SEGUNDOS 60
+#define PULSO 1 // em segundos 
 
 //pacotes seguem este padrao:
 //tamanho do pacote (conteudo + tipo), tipo de pacote, conteudo do pacote
