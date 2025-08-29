@@ -15,7 +15,7 @@ O beacon anuncia os seguintes dados:
 - Flags BLE (0x01): modo discoverable
 - Complete List (0x07): 4a215260-da59-42f6-b273-38fcde738f98
 
-Para modificar o conteúdo transmitido, modifique o vetor "adv_raw_data[]" com o conteúdo desejado, mantendo um limite de 31 bytes por cada pacote enviado. Fica ressaltado que o uuid deve ser escrito em little-endian dentro de `adv_raw_data`
+Para modificar o conteúdo transmitido, modifique o vetor `adv_raw_data[] com o conteúdo desejado, mantendo um limite de 31 bytes por cada pacote enviado. Fica ressaltado que o uuid deve ser escrito em little-endian dentro de `adv_raw_data`
 
 # Ciclo de Funcionamento
 
