@@ -1,4 +1,4 @@
 beacon 1: 4a215260-da59-42f6-b273-38fcde738f98  
-beacon 2: 188c87bf-977f-4154-8682-958ec3335bdc
-beacon 3: ea02d05b-179b-46a9-9137-103b06028fb7
-beacon 4: 945d6c6f-959f-4e35-ad73-6ec2ff14ecf9
+beacon 2: 188c87bf-977f-4154-8682-958ec3335bdc  
+beacon 3: ea02d05b-179b-46a9-9137-103b06028fb7  
+beacon 4: 945d6c6f-959f-4e35-ad73-6ec2ff14ecf9  
